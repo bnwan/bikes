@@ -1,1 +1,1 @@
-export { BikeList } from './bike-list.jsx';
+export { BikesContainer } from './bikes-container.jsx';

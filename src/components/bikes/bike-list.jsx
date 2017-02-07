@@ -5,14 +5,11 @@ import { BikeItem } from './bike-item.jsx';
 import './bikes.scss';
 
 export class BikeList extends Component {
-  constructor() {
-    super();
-  }
 
   renderBikes() {
-    return (
-      <BikeItem />
-    );
+    return this.props.bikes.map((bike, index) => {
+      return <BikeItem key={index} {...bike} />
+    });
   }
 
   render() {
