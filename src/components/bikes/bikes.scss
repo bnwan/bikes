@@ -1,0 +1,8 @@
+.bikes-list-container {
+    display: flex;
+    
+    .bike-item {
+        border: 1px solid silver;
+        padding: 10px;
+    }
+}
