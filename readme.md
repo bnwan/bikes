@@ -1,7 +1,7 @@
 # Sample application using React and Redux
 
 ## Run Application
-Application was deployed using surge.sh and is hosted at http://honorable-suggestion.surge.sh
+Application was deployed using surge.sh and is hosted at http://benjamin-nwaneampeh.surge.sh
 ## DEV
 ### Install
 `npm install`
@@ -17,6 +17,9 @@ Application was deployed using surge.sh and is hosted at http://honorable-sugges
 ### Additional things to do
 - write some more unit tests
 - add eslint to the project
+- `index.html` is currently in `build` folder. Need to move it out and put it in the application root and have webpack copy it into the `build` folder
+- don't commit `build` folder
+- git hook to run unit tests and linting before pushing to git repo
 
 ### Assumptions
 - A design is provided
