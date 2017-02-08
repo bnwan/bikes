@@ -12,3 +12,10 @@ export function fetchBikes() {
             });
     }
 }
+
+export function sortBikesByClass(bikeClass) {
+    return {
+        type: 'SORT_BIKES',
+        payload: bikeClass
+    }
+}

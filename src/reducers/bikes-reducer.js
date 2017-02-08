@@ -1,4 +1,11 @@
+import * as _ from 'lodash';
 import { initialState } from '../store';
+
+function sortBikesBy(bikes, bikeType) {
+  let bikesWithType = bikes.filter(bike => { return _.includes(bike.class, bikeType) });
+  let bikesWithoutType = bikes.filter(bike => { return !_.includes(bike.class, bikeType) });
+  return bikesWithType.concat(bikesWithoutType);
+}
 
 export const bikesReducer = (state = initialState.bikeSection, action) => {
   switch (action.type) {
@@ -13,6 +20,7 @@ export const bikesReducer = (state = initialState.bikeSection, action) => {
         ...state,
         isFetching: false,
         isFetched: true,
+        bikeTypes: _.uniq(_.flatMap(action.payload, bike => { return bike.class; })),
         bikes: action.payload
       };
       break;
@@ -24,7 +32,10 @@ export const bikesReducer = (state = initialState.bikeSection, action) => {
       };
       break;
     case 'SORT_BIKES':
-      return state;
+      return {
+        ...state,
+        bikes: sortBikesBy(state.bikes, action.payload)
+      };
     default:
       return state;
   }
