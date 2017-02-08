@@ -13,10 +13,12 @@ export class BikeItem extends Component {
   render() {
     return (
       <div className='bike-item'>
-        <img src={this.props.image.thumb} alt={this.props.name} />
-        <div className='name'>{this.props.name}</div>
-        <div className='class-container'>{this.renderBikeClass()}</div>
-        <div>{this.props.description}</div>
+        <img src={this.props.image.thumb} alt={this.props.name} style={{width: '100%'}} />
+        <div className='bike-details'>
+          <div className='name'>{this.props.name}</div>
+          <div className='class-container'>{this.renderBikeClass()}</div>
+          <div>{this.props.description}</div>
+        </div>
       </div>
     );
   }
