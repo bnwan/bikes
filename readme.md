@@ -21,3 +21,4 @@ Application was deployed using surge.sh and is hosted at http://honorable-sugges
 ### Assumptions
 - A design is provided
 - This application is part of a bigger application
+- That no one else is working on the project, thus pushing straight to master
